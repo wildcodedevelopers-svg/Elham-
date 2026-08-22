@@ -43,7 +43,7 @@
             position: absolute;
             border-radius: 50%;
             filter: blur(90px);
-            opacity: 0.45;
+            opacity: 0.35;
             animation: float 14s infinite ease-in-out alternate;
         }
 
@@ -78,6 +78,51 @@
             0% { transform: translate(0, 0) scale(1); }
             50% { transform: translate(40px, -60px) scale(1.08); }
             100% { transform: translate(-30px, 40px) scale(0.92); }
+        }
+
+        /* Floating Emojis Background */
+        .emoji-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .floating-emoji {
+            position: absolute;
+            bottom: -50px;
+            font-size: 1.8rem;
+            opacity: 0.6;
+            animation: floatUp 12s linear infinite;
+        }
+
+        .e1 { left: 8%; animation-duration: 14s; animation-delay: 0s; }
+        .e2 { left: 22%; animation-duration: 11s; animation-delay: 2s; font-size: 2.2rem; }
+        .e3 { left: 38%; animation-duration: 16s; animation-delay: 4s; }
+        .e4 { left: 55%; animation-duration: 10s; animation-delay: 1s; font-size: 2.5rem; }
+        .e5 { left: 70%; animation-duration: 13s; animation-delay: 3s; }
+        .e6 { left: 84%; animation-duration: 15s; animation-delay: 5s; font-size: 2rem; }
+        .e7 { left: 93%; animation-duration: 12s; animation-delay: 1.5s; }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
         }
 
         .card {
@@ -292,11 +337,22 @@
 </head>
 <body>
 
-    <!-- Animated Glowing Background Orbs -->
+    <!-- Animated Background Orbs -->
     <div class="bg-orbs">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
         <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Floating Emojis Layer -->
+    <div class="emoji-bg">
+        <span class="floating-emoji e1">❤️</span>
+        <span class="floating-emoji e2">✨</span>
+        <span class="floating-emoji e3">💖</span>
+        <span class="floating-emoji e4">🔥</span>
+        <span class="floating-emoji e5">🌸</span>
+        <span class="floating-emoji e6">🌹</span>
+        <span class="floating-emoji e7">⚡</span>
     </div>
 
     <div class="card">
