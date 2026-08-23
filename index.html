@@ -7,6 +7,8 @@
     <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <!-- Google Font for Calligraphy -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -329,6 +331,7 @@
             object-fit: cover;
         }
 
+        /* Updated Note Paper with Cursive Calligraphy */
         .note-paper {
             background: rgba(255, 255, 255, 0.08);
             border-left: 5px solid #ec4899;
@@ -336,16 +339,25 @@
             border-radius: 12px;
             text-align: left;
             margin: 1.2rem 0;
-            line-height: 1.7;
-            font-size: 1.1rem;
+            line-height: 1.5;
             white-space: pre-wrap;
+        }
+
+        .note-paper p {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            color: #fbcfe8;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(236, 72, 153, 0.3);
         }
 
         .sender-tag {
             text-align: right;
             color: #c084fc;
-            font-weight: bold;
-            font-size: 1.1rem;
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
         }
 
         footer {
